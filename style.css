@@ -1,0 +1,672 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: #123b5d;
+    color: white;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7dd3fc;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #eaf6ff,
+        #ffffff
+    );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #1976a8;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #176b87;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+    margin-right: 10px;
+
+    border-radius: 7px;
+
+    background: #176b87;
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: #123b5d;
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-container {
+    margin-left: 50px;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+.light-section {
+    background: #f4f8fa;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #176b87;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #123b5d;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #555;
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-box {
+    padding: 22px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.info-box strong {
+    display: block;
+    color: #176b87;
+    margin-bottom: 7px;
+}
+
+.info-box span {
+    color: #555;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline-item {
+    border-left: 4px solid #176b87;
+    padding-left: 30px;
+    margin-bottom: 35px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.timeline-content h3 {
+    color: #123b5d;
+    font-size: 24px;
+}
+
+.timeline-content h4 {
+    color: #176b87;
+    margin: 5px 0;
+}
+
+.date {
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.skill-category h3 {
+    color: #123b5d;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.skill-card {
+    margin-bottom: 22px;
+}
+
+.skill-card span {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+
+    background: #e1e8ec;
+
+    border-radius: 20px;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #176b87;
+    border-radius: 20px;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-85 {
+    width: 85%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+
+/* Soft Skills */
+
+.soft-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.soft-card {
+    text-align: center;
+    padding: 25px 10px;
+
+    background: #f4f8fa;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.soft-card:hover {
+    transform: translateY(-5px);
+}
+
+.soft-card span {
+    font-size: 30px;
+}
+
+.soft-card h4 {
+    margin-top: 8px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #123b5d;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.project-tag {
+    display: inline-block;
+
+    background: #e6f4f8;
+    color: #176b87;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    margin-right: 5px;
+}
+
+
+/* =========================
+   INTERESTS
+========================= */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.interest-card {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border: 1px solid #e1e8ec;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.interest-card span {
+    font-size: 40px;
+}
+
+.interest-card h3 {
+    margin: 12px 0 8px;
+    color: #123b5d;
+}
+
+.interest-card p {
+    color: #666;
+}
+
+
+/* =========================
+   FUTURE GOALS
+========================= */
+
+.goals-section {
+    background: #123b5d;
+    color: white;
+}
+
+.goals-section .section-title p {
+    color: #7dd3fc;
+}
+
+.goals-section .section-title h2 {
+    color: white;
+}
+
+.goals-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.goals-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.goals-content p {
+    margin-bottom: 18px;
+    color: #e2e8ec;
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+}
+
+.contact-info h3,
+.contact-message h3 {
+    color: #123b5d;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 18px;
+}
+
+.contact-item strong {
+    color: #176b87;
+}
+
+.contact-item p {
+    color: #555;
+}
+
+.contact-message {
+    background: white;
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #0b263d;
+
+    color: white;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #cbd5dc;
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .profile-container {
+        margin-left: 0;
+    }
+
+    .about-content,
+    .skills-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid,
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .personal-info,
+    .soft-skills,
+    .projects-grid,
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
